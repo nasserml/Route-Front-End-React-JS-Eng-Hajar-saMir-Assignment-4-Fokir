@@ -1,0 +1,1684 @@
+/* General CSS rules=========================== */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing:border-box;
+}
+
+
+.container{
+    width:80%;
+    margin:auto;
+}
+
+.clear-fix{
+    clear:both;
+}
+
+body{
+    font-family:"Roboto", sans-serif;
+    /* height: 10000px; */
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Source Sans 3", sans-serif;
+}
+
+
+.main-color{
+    color:rgb(255,48,91);
+}
+
+.section{
+    padding:70px 0px;
+}
+
+
+.aspect-ratio{
+    aspect-ratio: 16/9;
+}
+
+
+
+
+
+
+/* Navbar CSS rules ============================================= */
+
+.navbar{
+    background-color:transparent;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    z-index:99;
+}
+.navbar a{
+    text-decoration:none;
+}
+
+.navbar-logo{
+    /* background-color:tomato; */
+    padding:18px 15px;
+    width:25%;
+}
+
+.navbar-links{
+    /* background-color: teal; */
+    
+}
+
+.navbar-logo{
+    float:left;
+}
+
+.navbar-links{
+    float:right;
+}
+
+.navbar-links ul{
+    list-style-type:none;
+}
+
+.navbar-links ul li{
+    float:left;
+    padding: 20px 10px;
+}
+
+.navbar-logo a{
+    font-size:24px;
+    line-height:25px;
+    font-weight:800;
+    
+}
+
+
+.navbar-links a{
+    color:#fff;
+    font-size:16px;
+    line-height:20px;
+    font-weight:300;
+    transition: 0.3s color;
+}
+
+
+
+.navbar .navbar-links ul li a:hover{
+    color:rgb(255,48,91);
+}
+
+
+
+
+/* Header Css Rules */
+
+.header{
+    /* background-color:turquoise; */
+}
+
+.header-caption{
+    /* background-color:yellowgreen */
+}
+
+.header{
+    background-image:url("../images/slider-02.jpg");
+    height:100vh;
+    background-size:cover;
+    background-position:center center;
+    text-align:center;
+    position:relative;
+}
+
+.overlay{
+    background-color:rgba(0,0,0,0.8);
+    height: 100%;
+
+}
+
+.header-caption{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+}
+
+.header-caption h3{
+    font-size:24px;
+    line-height: 26px;
+    font-weight:600;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.header-caption h1{
+    font-size:70px;
+    line-height:77px;
+    font-weight:700;
+    margin-bottom:10px
+}
+
+.header-caption h4{
+    font-size:26px;
+    line-height:31px;
+    font-weight:300;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+    .header .header-caption h3{
+        font-size:22px;
+        line-height:24px;
+    }
+
+    .header .header-caption h1{
+        font-size:38px;
+        line-height:24px;
+        font-weight:600;
+    }
+
+    .header .header-caption h4{
+        font-size:18px;
+        line-height:22px;
+        font-weight:600;
+    }
+
+
+   .navbar{
+    z-index: 1;
+   }
+    .navbar .navbar-links{
+        float:none;
+    }
+    .navbar .navbar-links ul{
+        position:absolute;
+        background-color:#555555;
+        width:70%;
+        text-align:center;
+        margin-left:50px;
+        left:50px;
+        top:100%;
+        opacity:0;
+        visibility:hidden;
+        z-index: 999;
+        transition: 0.6s all;
+    }
+
+    .navbar .navbar-links ul li{
+        float: none;
+        padding: 18px;
+    }
+
+    .icon{
+        width:30px;
+        height:20px;
+        /* background-color:turquoise; */
+        position:absolute;
+        right:20px;
+        top:50%;
+        transform:translateY(-50%);
+        padding: 9px;
+    }
+
+    .icon span{
+        display: block;
+        width:22px;
+        height:2px;
+        background-color:#fff;
+        border-radius:1px;
+    }
+
+    .icon span:nth-child(1){
+    }
+
+    .icon span:nth-child(2){
+        
+        margin-top:4px;
+        transition: 0.3s opacity;
+    }
+
+    .icon span:nth-child(3){
+       
+        margin-top: 4px;;
+    }
+
+    .icon:hover + ul{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .icon:hover span:nth-child(1){
+        top:10px;
+       
+
+    }
+    .icon:hover span:nth-child(2){
+        opacity:0;
+    }
+
+    .icon:hover span:nth-child(3){
+        top:10px;
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* About CSS Rules ======================== */
+.about{
+    /* background-color:turquoise; */
+}
+
+.about-imge{
+    /* background-color:pink; */
+}
+
+.about-caption{
+    /* background-color:gold; */
+}
+
+.about{
+    /* padding:40px 0px; */
+    margin:40px 0px;
+}
+
+.about-image{
+    float:left;
+    width: 35%;
+    position:relative;
+    overflow:hidden;
+}
+
+.about-image::before{
+    content:"";
+    width:85%;
+    height:95%;
+    /* background-color:gold; */
+    position:absolute;
+    top:0px;
+    left: 0px;
+    border: 8px solid #555555;
+    border-radius:5px;
+}
+
+
+
+.about-image img{
+    width: 90%;
+    position:relative;
+    top:25px;
+    left: 25px;
+}
+
+
+.about-image .about-image-icons-overlay{
+    text-align:center;
+    color:#fff;
+    width: 90%;
+    height:100%;
+    background-color:rgba(0, 0, 0,0.57);
+    position: absolute;
+    top:25px;
+    left: 25px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease 0s, height 0.5s ease 0s;
+    
+}
+
+.about-image:hover .about-image-icons-overlay{
+    height:100%;
+    transform: translateY(0%);
+}
+
+.about .about-image .about-image-icons-overlay .icons{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.about .about-image .about-image-icons-overlay i{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight:400;
+    margin-left: 20px;
+
+}
+
+.about .about-image .about-image-icons-overlay .icons a{
+    text-decoration: none;
+    color:white;
+    transition: color 0.3s ;
+}
+
+.about .about-image .about-image-icons-overlay .icons a:hover{
+    color: #FF305B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-caption{
+    float:left;
+    width:60%;
+    margin-left:5%;
+}
+
+.about-caption h2{
+    font-size: 34px;
+    font-weight:600;
+    line-height:22px;
+    color:rgb(51,51,51);
+    margin-bottom: 20px;
+    position: relative;
+    padding-left:13px;
+}
+
+.about-caption h2::before{
+    content:"";
+    width: 4px;
+    height: 100%; 
+    background-color:#FF305B;
+    position:absolute;
+    left:0px;
+    top:0px;
+
+}
+
+.about-caption p{
+    font-size:16px;
+    line-height:25px;
+    font-weight:400;
+    color:rgb(85,85,85);
+    padding-bottom:20px;
+    margin-bottom:20px;
+    border-bottom: 1px dashed #999999
+}
+.about-caption ul{
+    list-style-type:none;
+}
+.about .about-caption ul li a{
+    text-decoration:none;
+    font-size:14px;
+    line-height:14px;
+    font-weight:400;
+    color:rgb(126,126,126);
+}
+
+.about-caption ul li{
+    font-size:14px;
+    line-height:14px;
+    font-weight:400;
+    color:rgb(85,85,85);
+    margin-bottom:15px;
+    float: left;
+    width:50%
+}
+
+.about-caption ul li span{
+    font-size:14px;
+    line-height:14px;
+    font-weight:500;
+    color:rgb(51,51,51);
+}
+
+.about-caption button{
+    float:left;
+    font-size:16px;
+    line-height:25px;
+    font-weight:400;
+    background-color:#FF305B;
+    color:#fff;
+    border: 1px solid transparent;
+    border-radius:5px;
+    margin-right:13px;
+    padding: 10px 24px;
+    cursor:pointer;
+    transition: background-color 0.5s ease-in-out;
+
+}
+
+.about-caption button i{
+    margin-left: 5px;
+}
+
+.about-caption button:hover{
+    background-color:#EC2403;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .about .about-caption, .about .about-image{
+        width:49%;
+        margin:0;
+    }
+
+    .about .about-image{
+        margin-right: 2%;
+    }
+
+    .about-image::before{
+        content:"";
+        border:none;
+    }
+
+    .about .about-image img {
+        top: 0;
+        left: 0
+    }
+
+    .about .about-image .about-image-icons-overlay{
+        top:0px;
+        left:0px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .about .about-image,.about .about-caption{
+        width:100%;
+        margin:0px;
+    }
+
+    .about .about-caption{
+        margin-top:30px;
+    }
+
+    .about .about-caption ul li{
+        width:100%;
+        font-size: 16px;
+        line-height:16px;
+        font-weight:400;
+    }
+
+    .about .about-caption ul li span{
+        font-size:16px;
+        line-height:16px;
+        font-weight:500;
+    }
+
+    .about .about-caption ul li a{
+        font-size:16px;
+        line-height: 16px;
+        font-weight:400;
+        color:rgb(126,126,126);
+    }
+}
+
+
+@media only screen and (min-width:1200px){
+    .about{
+        margin-left: 16%;
+        margin-right: 16%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Our Services CSS Rules =================================== */
+
+
+.services{
+    background-color:#F1F1F1;
+}
+
+
+.services-title{
+    /* background-color: tan; */
+}
+
+.services-items{
+    /* background-color:teal; */
+}
+
+.services-item{
+    /* background-color:gold; */
+}
+
+.services{
+    text-align:center;
+    padding-top:100px;
+    padding-bottom:54px;
+}
+
+.services .services-items .services-item{
+    float: left;
+    width: 25%
+}
+
+.services .services-title h2{
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+
+    position: relative;
+    
+}
+
+.services .services-items{
+    padding: 0px 15px;
+    text-align: center;
+}
+
+.services .services-items .services-item{
+    padding:40px 15px;
+    
+}
+
+
+
+.services .services-title h2::before{
+    content: "";
+    height:10px;
+    width: 70px;
+    position:absolute;
+    bottom: 0;
+    border-color: #FF305B;
+    border-width: 1px 0px;
+    border-style: solid;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.services .services-title h2::after{
+
+    content:"";
+    width: 160px;
+    height:1px;
+    
+    /* background-color:teal; */
+    position:absolute;
+    bottom: 9px;
+    left: 50%;
+    border-top: 1px solid #FF305B;
+    transform: translate(-50%, -50%);
+
+}
+
+/* .services .services-title  h2 .border-top-bottom{
+    width: 70px;
+    height: 11px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    border-top: 1px solid #FF305B;
+    border-bottom: 1px solid #FF305B;
+    transform: translate(-50%, 0%);
+}
+
+.services .services-title h2 .border-top-bottom::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 1px;
+    background-color: rgba(255, 48, 91,1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:0px;
+} */
+
+/* .services .services-title h2::after{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:10px;
+    background-color:gold;
+    right:0px;
+    top:0px;
+
+} */
+
+/* .services .services-title h2::before{
+    content:'';
+    position: absolute;
+    width: 160px;
+    height:1px;
+    top:50%;
+    left:50%;
+    background-color:turquoise;
+    border-bottom: 1px solid black;
+    border-top: 1px solid blue;
+    border: 50%;
+    transform:translate(-50%,0)
+
+} */
+
+.services .services-title h2{
+    font-size: 40px;
+    line-height: 30px;
+    font-weight:800;
+    color: rgb(51,51,51);
+}
+
+.services .services-items .services-item i {
+    font-size: 36px;
+    color: rgb(255,48, 91);
+    margin-bottom: 20px;
+}
+
+
+.services .services-items .services-item h3{
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 600;
+    color: rgb(51,51,51);
+    margin-bottom: 15px;
+    text-transform:uppercase;
+}
+
+.services .services-items .services-item p{
+    font-size:16px;
+    line-height: 25px;
+    font-weight:400;
+    color: rgb(85,85,85);
+}
+.services .services-items .services-item{
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+.services .services-items .services-item:hover{
+    background-color: #fff;
+    border-radius:3px;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.1)
+
+}
+
+.services .services-items .services-item i{
+    transition: transform 0.3s ease-in-out;
+}
+
+.services .services-items .services-item:hover i{
+    transform: scale(1.2,1.2);
+}
+
+
+@media only screen and (max-width: 992px){
+
+    .services .services-items .services-item{
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width:768px){
+    .services .services-items .services-item{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Portfolio CSS Rules ============================= */
+.portfolio{
+    /* background-color: aqua; */
+
+}
+
+.portfolio-title {
+    /* background-color: tan; */
+}
+
+.portfolio-items{
+    /* background-color: teal; */
+}
+
+.portfolio-items-buttons{
+    /* background-color: yellowgreen; */
+}
+
+.portfolio-items-images{
+    /* background-color: gold; */
+}
+
+.portfolio-item-image{
+    /* background-color: tomato; */
+}
+
+.portfolio-item-image-overlay{
+    /* background-color: darkgoldenrod; */
+}
+
+
+
+.portfolio{
+    padding-top: 100px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.portfolio-title h2{
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.portfolio-items-buttons {
+    margin-bottom: 50px;
+}
+
+.portfolio-item-image{
+    float: left;
+    width: 33.333%;
+    padding: 0px 15px;
+    margin-bottom: 30px;
+}
+
+.portfolio-item-image img{
+    width: 100%;
+}
+
+
+.portfolio-title h2{
+    font-size: 40px;
+    line-height: 30px;
+    font-weight: 800;
+    color: rgb( 51, 51, 51);
+    position: relative;
+}
+
+.portfolio-title h2::before{
+    content: "";
+    width: 70px;
+    height: 9px;
+    /* background-color: darkcyan; */
+    position:absolute;
+    border-top: 1px solid #FF305B;
+    border-bottom: 1px solid #FF305B;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.portfolio-title h2::after{
+    content: "";
+    width: 160px;
+    height: 1px;
+    background-color:#FF305B;
+    position:absolute;
+    bottom: 5px;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+.portfolio-items-buttons button{
+    font-size: 16px;
+    line-height:25px;
+    font-weight:400;
+    text-transform:uppercase;
+    color: rgb(51,51,51);
+}
+.portfolio-items-buttons button{
+    padding: 3px 12px;
+    cursor:pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.portfolio-item-image{
+    position:relative;
+}
+
+.portfolio-item-image-overlay{
+    position: absolute;
+    top: 0%;
+    left: 15px;
+    right: 15px;
+    height:100%;
+    background-color:rgba(0,0,0, 0.5);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    cursor:pointer
+}
+.portfolio-item-image-overlay i{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight:400;
+    color: rgb(255,48,91)
+}
+
+.portfolio-item-image-overlay i.fa-link{
+    font-weight: 600;
+}
+.portfolio-item-image-overlay i{
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
+
+.portfolio-item-image-overlay:hover{
+    opacity:1;
+}
+
+@media only screen and (max-width:992px){
+    .portfolio .portfolio-items-images .portfolio-item-image{
+        width: 50%
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .portfolio .portfolio-items-images .portfolio-item-image{
+        width:100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Information CSS Rules ============================ */
+
+.information{
+    background-color: #F1F1F1;
+}
+
+.information-item{
+    /* background-color: gold; */
+}
+
+.information{
+    padding: 70px  0px;
+    text-align:center;
+}
+
+.information .information-item{
+    float: left;
+    width: 25%;
+    padding: 0px 15px;
+    padding-bottom: 35px;
+}
+
+.information .information-item i{
+    margin-bottom: 15px;
+    font-size: 26px;
+    line-height: 26px;
+    /* font-weight: 400; */
+    color: rgb(255,48,91);
+}
+
+.information .information-item h3{
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 29px;
+    font-weight: 800;
+    color: rgb(51,51,51);;
+}
+
+.information .information-item h5{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    color: rgb(85,85, 85);
+}
+
+
+
+@media only screen and (max-width:768px){
+    .information .information-item{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Testimonial CSS rules ===================== */
+
+.testimonial{
+    /* background-color:teal; */
+}
+
+.testimonial-title{
+    /* background-color: thistle; */
+}
+
+.testimonial-item{
+    background-color:#F1F1F1;
+}
+
+.testimonial-item-image{
+    /* background-color: tomato; */
+}
+
+
+.testimonial-item-caption{
+    /* background-color: gold; */
+}
+
+.testimonial-item-caption .rating{
+    /* background-color: darkorange */
+}
+
+
+.testimonial{ 
+    padding: 70px 0px;
+}
+
+
+.testimonial-title{
+    text-align: center;
+    padding: 0px 15px;
+    position: relative;
+}
+
+
+
+.testimonial-title h2{
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    line-height:30px;
+    font-weight:800;
+    color:rgb(51,51,51);
+    position: relative;
+}
+
+.testimonial-title h2::before{
+    content:"";
+    height: 9px;
+    width: 70px;
+    /* background-color: aqua; */
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    border-bottom: 1px solid #FF305B;
+    border-top: 1px solid #FF305B;
+    transform: translateX(-50%);
+}
+
+.testimonial-title h2::after{
+    content:"";
+    width: 160px;
+    height: 1px;
+    background-color: #FF305B;;
+    position:absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.testimonial-item-image{
+    float: left;
+    width: 20%;
+    margin: 12px 0px;
+    position:relative
+}
+.testimonial-item-image img{
+    width: 90%;
+    position: absolute;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.testimonial-item-caption{
+    float: left;
+    width: 80%;
+}
+
+
+
+.testimonial-item{
+    padding:40px;
+    position: relative;
+}
+
+
+
+.testimonial-item:before{
+    content:"";
+
+    height: 0px;
+    width: 0px;
+    
+    position:absolute;
+    border-top: 90px solid #FF305B;
+    border-bottom: 90px solid transparent;
+    border-left: 90px solid #FF305B;
+    border-right: 90px solid transparent;
+    top:0;
+    left: 0;
+}
+
+
+
+
+.testimonial-item-caption h3{
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 29px;
+    font-weight: 600;
+    color:rgb(51, 51, 51);
+}
+
+
+.testimonial-item-caption h4{
+    color: rgb(119,119,119);
+    font-size: 15px;
+    line-height:17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.testimonial-item-caption h4 a{
+    text-decoration: none;
+    color: rgb(119,119,119);
+}
+
+.testimonial-item-caption p{
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    color: rgb(85, 85, 85);
+}
+
+.testimonial-item-caption .rating {
+    margin-bottom: 18px;
+    color: #F1C30D;
+    font-size: 14px;
+}
+
+
+.testimonial-buttons{
+    /* background-color: aqua; */
+}
+
+.testimonial-button-one{
+    background-color: #FF305B;
+}
+
+.testimonial-button-circle{
+    /* background-color: tan; */
+}
+
+.testimonial-buttons{
+    margin-top: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-buttons .inner{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-color: turquoise; */
+}
+
+.testimonial-button-one{
+    height:10px;
+    width: 25px;
+    float: left;
+    margin-right: 8px;
+    border: 1px solid #FF305B;
+    border-radius: 10px;
+}
+
+.testimonial-button-circle{
+    height: 10px;
+    width: 10px;
+    float: left;
+    border-radius: 50%;
+    border: 1px solid #FF305B;
+}
+
+
+.testimonial-button-one:hover , .testimonial-button-circle:hover{
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 768px){
+    .testimonial-item{
+        padding:20px;
+        margin: 0 14%;
+    }
+
+    .testimonial-item-image{
+        width: 110px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .testimonial-item-caption {
+        width: 100%;
+        margin-top:133px;
+    }
+} 
+
+
+@media only screen and (min-width: 1200px){
+    .testimonial-item{
+        margin: 0 25%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Blog CSS Styles Rules ===================== */
+
+.blog{
+    background-color: #F1F1F1;
+}
+
+.blog-title{
+    /* background-color: pink; */
+}
+
+
+
+.blog-items{
+    /* background-color: yellowgreen; */
+}
+
+.blog-item-inner{
+     background-color: white;
+}
+
+.blog a{
+    text-decoration: none;
+    }
+
+.blog{
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.blog-title h2{
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 30px;
+    font-weight: 800px;
+    color: rgb( 51, 51, 51);
+    position: relative;
+}
+
+.blog-title h2::before{
+    content: "";
+    width:70px;
+    height: 9px;
+    /* background-color: blue; */
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    border-bottom: 1px solid #FF305B;
+    border-top: 1px solid #FF305B;
+    transform: translateX(-50%)
+}
+
+
+
+
+.blog-title h2::after{
+    content: "";
+    width: 160px;
+    height: 1px;
+    background-color: #FF305B;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blog-item{
+    float: left;
+    width: 33.33%;
+    padding:0px 15px ;
+    position: relative;
+}
+.blog-item-image img{
+    width: 100%;
+}
+
+
+
+.blog-item-youtube{
+    overflow: hidden;
+    height: 202px;
+    width: 360px
+}
+.blog-item-youtube iframe{
+    height: 100%;
+    width: 100%;;
+}
+
+
+
+
+.blog-item-caption{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+
+.blog-item p{
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    color: rgb(85, 85, 85);
+    margin-bottom: 10px;
+}
+
+.blog-item h3 {
+    margin-bottom: 15px;
+}
+
+.blog-item h3 a{
+    color: #333333;
+    transition: color 0.3s ease-in-out;
+}
+
+.blog-item h3 a:hover{
+    color: rgb(255,48,91);
+}
+
+
+
+
+
+
+.blog-item .read-more a {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400px;
+    color: #333333;
+    transition: color 0.3s ease-in-out;
+}
+
+.blog-item .read-more a:hover{
+    color: #ff305b;
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .blog .container#container{
+        width: 62%;
+    }
+    .blog-item{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width:992px ){
+    .blog .container{
+        width: 95%;
+    }
+
+}
+
+@media only screen and (min-width:1200px){
+    .blog .container{
+        width: 61%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Us CSS Rules ==================== */
+
+
+.contact-us{
+    /* background-color: tan; */
+}
+
+.contact-us-title{
+    /* background-color: turquoise; */
+}
+
+.contact-us-form{
+    /* background-color: gold; */
+}
+
+.contact-us{
+    padding: 100px 0px;
+
+}
+
+.contact-us-title h2{
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 30px;
+    font-weight: 800;
+    color: rgb(51,51,51);
+    text-align:center;
+    position: relative;
+}
+
+.contact-us-title h2::before{
+    content: "";
+    width: 70px;
+    height: 9px;
+    position: absolute;
+    /* background-color: blue; */
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid #FF305B;
+    border-top:1px solid #FF305B ;
+}
+
+.contact-us-title h2::after{
+    content: "";
+    width:160px;
+    height: 1px;
+    background-color: #FF305B;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
+
+.contact-us-form{
+    padding: 0px 15px;
+}
+
+.contact-us-form .input-name, .contact-us-form .input-subject, .contact-us-form .message-text-area, .contact-us-form .button-send-message{
+    float: left;   
+}
+
+
+
+.contact-us-form .input-email{
+    float: right;
+    width: 46%
+}
+
+.contact-us-form .input-name{
+    width: 45%;
+}
+
+.contact-us-form .input-subject{
+    width: 97%;
+}
+
+.contact-us-form .message-text-area{
+    width: 97%;
+}
+
+
+.contact-us-form input{
+    height: 40px;
+}
+.contact-us-form .input-form{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 25px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-image: none;
+    background-color: #fff;
+    box-shadow: inset 0 1px 1px rgb(0, 0, 0,0.075);
+    border: 1px solid #ccc;
+    color: #555;
+    transition: border-color ease-in-out 0.15s;
+}
+
+.contact-us-form .input-form:focus{
+    border-color: #66afe9;
+    box-shadow: none;
+    color: #000000;
+    outline: 0 none;
+}
+
+
+
+
+.contact-us-form .button-send-message{
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 0px 20px;
+    background-color: #ff305b;
+    border-color: #ff305b;
+    border: 1px solid transparent;
+    color: white;
+    opacity: 1;
+    height: 40px;
+    line-height: 38px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out background-color, 0.3s ease-in-out border-color, 0.3s ease-in-out color;
+}
+
+.contact-us-form .button-send-message:hover{
+    background-color: #ec2403;
+    border-color: #ff305b;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px){
+
+    .contact-us-form .input-name{
+        width: 97%
+    }
+    .contact-us-form .input-email{
+        width: 97%;
+        float: left;
+    }
+}
+
+
+@media only screen and (min-width:1200px){
+    .contact-us .container{
+        width: 45%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer CSS Rules ===================== */
+
+.footer{
+    background-color: #333333;
+}
+
+.footer-icon{
+    /* background-color: tan; */
+}
+
+.footer-caption{
+    /* background-color: gold; */
+}
+
+
+
+
+.footer{
+    padding: 50px 0px;
+    text-align:center
+}
+
+.footer-icon{
+    padding: 0px 15px;
+    margin-bottom: 20px;
+}
+
+.footer-icon i{
+    padding: 0px 10px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 400;
+    transition: color 0.5s ease-in-out;
+}
+
+.footer-icon i:hover{
+    color: #ff305b;
+    cursor: pointer;
+}
+
+.footer-caption p{
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    color: white;
+}
+
+.footer-caption a{
+    text-decoration: none;
+    color:#ff305b;
+    transition: color 0.5s ease-in-out;
+}
+
+.footer-caption a:hover{
+    color: #ec2403;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
